@@ -5,7 +5,10 @@
 @using List.Models;
 
 <h3>Here are all the orders of this Vendor:</h3>
-
+    @if (@Model["orders"].Count == 0)
+    {
+      <h5>There are no orders for this vendor</h5>
+    } 
 <ol>
   @foreach (Order order in @Model["orders"])
   {
