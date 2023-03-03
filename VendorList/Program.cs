@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MusicOrganizer
+namespace VendorList
 {
   class Program
   {
@@ -13,7 +13,6 @@ namespace MusicOrganizer
 
       WebApplication app = builder.Build();
 
-      // new code!
       app.UseDeveloperExceptionPage();
 
       app.UseRouting();
