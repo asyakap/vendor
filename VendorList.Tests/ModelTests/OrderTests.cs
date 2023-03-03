@@ -19,6 +19,17 @@ namespace Orders.Tests
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
+    [TestMethod]
+    public void GetTitle_ReturnsOrderTitle_String()
+    {
+      string title = "test";
+      string description = "test";
+      string price = "test";
+      string date = "test";
+      Order newOrder = new Order(title, description, date, price);
+      string result = newOrder.Title;
+      Assert.AreEqual(title, result);
+    }
 
 
 
