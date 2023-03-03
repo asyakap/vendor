@@ -11,12 +11,17 @@ namespace Orders.Tests
     [TestMethod]
     public void OrderConstructor_CreateInstanceOfConstructor_Order()
     {
-      Order newOrder = new Order("test");
+      string title = "test";
+      string description = "test";
+      string price = "test";
+      string date = "test";
+      Order newOrder = new Order(title, description, date, price);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
 
 
-    
+
+
   }
 }

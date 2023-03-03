@@ -68,13 +68,16 @@ namespace List.Tests
     [TestMethod]
     public void AddOrder_AssociatesOrderWithVendor_OrderList()
     {
-      string orderName = "Croissants";
-      Order newOrder = new Order(orderName);
+      string title = "test";
+      string description = "test";
+      string price = "test";
+      string date = "test";
+      Order newOrder = new Order(title, description, date, price);
       List<Order> newList = new List<Order> { newOrder };
 
       string name = "Vendor1";
-      string description = "Description1";
-      Vendor newVendor = new Vendor(name, description);
+      string description1 = "Description1";
+      Vendor newVendor = new Vendor(name, description1);
       newVendor.AddOrder(newOrder);
 
       List<Order> result = newVendor.Orders;
