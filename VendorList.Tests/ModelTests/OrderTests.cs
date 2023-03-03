@@ -12,7 +12,7 @@ namespace Orders.Tests
     {
       Order.ClearAll();
     }
-    
+
     [TestMethod]
     public void OrderConstructor_CreateInstanceOfConstructor_Order()
     {
@@ -84,6 +84,24 @@ namespace Orders.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      string title1 = "test1";
+      string description1 = "test1";
+      string price1 = "test1";
+      string date1 = "test1";
+      Order newOrder1 = new Order(title1, description1, date1, price1);
+      string title2 = "test2";
+      string description2 = "test2";
+      string price2 = "test2";
+      string date2 = "test2";
+      Order newOrder2 = new Order(title2, description2, date2, price2);
+      List<Order> newOrderList = new List<Order> { newOrder1, newOrder2 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newOrderList, result);
+    }
 
   }
 }
