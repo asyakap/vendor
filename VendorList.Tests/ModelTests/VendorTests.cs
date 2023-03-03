@@ -11,8 +11,8 @@ namespace Vendor.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("test Vendor", "test Description");
-      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+      List.Models.Vendor newVendor = new List.Models.Vendor("test Vendor", "test Description");
+      Assert.AreEqual(typeof(List.Models.Vendor), newVendor.GetType());
     }
   }
 }
