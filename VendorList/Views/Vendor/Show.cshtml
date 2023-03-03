@@ -5,21 +5,27 @@
 @using List.Models;
 
 <h3>Here are all the orders of this Vendor:</h3>
-    @if (@Model["orders"].Count == 0)
-    {
-      <h5>There are no orders for this vendor</h5>
-    } 
+@if (@Model["orders"].Count == 0)
+{
+  <h5>There are no orders for this vendor</h5>
+}
 <ol>
   @foreach (Order order in @Model["orders"])
   {
     <li><a href='/vendor/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
   }
   <br>
-  <form action='/vendor/@Model["vendor"].Id/orders/delete' method="post">
-  <button type="submit" name="button">Delete All Orders</button>
-  </form>
+
 
 </ol>
 <p><a href='/vendor/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
 <p><a href='/vendor'>Return to Vendor list</a></p>
 <p><a href='/'>Return to Main Page</a></p>
+
+<form action='/vendor/@Model["vendor"].Id/delete' method="post">
+  <button type="submit" name="button">Delete This Vendor</button>
+</form>
+<br>
+<form action='/vendor/@Model["vendor"].Id/orders/delete' method="post">
+  <button type="submit" name="button">Delete All Orders</button>
+</form>

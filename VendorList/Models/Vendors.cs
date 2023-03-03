@@ -29,6 +29,11 @@ namespace List.Models
       _instances.Clear();
     }
 
+    public static void ClearOne(int searchId)
+    {
+      _instances.RemoveAt(searchId - 1);
+    }
+
     public void AddOrder(Order order)
     {
       Orders.Add(order);
