@@ -45,5 +45,12 @@ namespace VendorList.Controllers
       return View(model);
     }
 
+    [HttpPost("/vendor/{vendorID}/orders/delete")]
+    public ActionResult DeleteAll()
+    {
+      Order.ClearAll();
+      return View();
+    }
+
   }
 }
