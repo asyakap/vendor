@@ -6,8 +6,13 @@ using List.Models;
 namespace Orders.Tests
 {
   [TestClass]
-  public class OrderTests
+  public class OrderTests : IDisposable
   {
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
+    
     [TestMethod]
     public void OrderConstructor_CreateInstanceOfConstructor_Order()
     {
@@ -65,6 +70,18 @@ namespace Orders.Tests
       Order newOrder = new Order(title, description, date, price);
       string result = newOrder.Date;
       Assert.AreEqual(date, result);
+    }
+
+    [TestMethod]
+    public void GetId_ReturnsOrderId_Int()
+    {
+      string title = "test";
+      string description = "test";
+      string price = "test";
+      string date = "test";
+      Order newOrder = new Order(title, description, date, price);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
     }
 
 
