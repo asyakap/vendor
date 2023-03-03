@@ -58,12 +58,6 @@ namespace VendorList.Controllers
       return View();
     }
 
-    [HttpPost("/vendor/{vendorId}/delete")]
-    public ActionResult DeleteOne(int vendorId)
-    {
-      Vendor.ClearOne(vendorId);
-      return View();
-    }
 
   }
 }

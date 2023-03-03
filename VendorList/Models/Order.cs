@@ -32,11 +32,6 @@ namespace List.Models
 
     }
 
-    public static void ClearOne(int searchId)
-    {
-      _instances.RemoveAt(searchId - 1);
-    }
-
     public static Order Find(int searchId)
     {
       return _instances[searchId - 1];
