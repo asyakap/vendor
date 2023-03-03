@@ -31,7 +31,17 @@ namespace Orders.Tests
       Assert.AreEqual(title, result);
     }
 
-
+    [TestMethod]
+    public void GetDescription_ReturnsOrderDescription_String()
+    {
+      string title = "test";
+      string description = "test";
+      string price = "test";
+      string date = "test";
+      Order newOrder = new Order(title, description, date, price);
+      string result = newOrder.Description;
+      Assert.AreEqual(description, result);
+    }
 
 
   }
