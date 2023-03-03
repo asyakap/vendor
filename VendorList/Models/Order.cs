@@ -29,12 +29,12 @@ namespace List.Models
     public static void ClearAll()
     {
       _instances.Clear();
+
     }
 
-    public static Order ClearOne(int searchId)
+    public static void ClearOne(int searchId)
     {
       _instances.RemoveAt(searchId - 1);
-      return _instances[searchId - 1];
     }
 
     public static Order Find(int searchId)
