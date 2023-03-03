@@ -64,5 +64,21 @@ namespace List.Tests
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      string orderName = "Croissants";
+      Order newOrder = new Order(orderName);
+      List<Order> newList = new List<Order> { newOrder };
+
+      string name = "Vendor1";
+      string description = "Description1";
+      Vendor newVendor = new Vendor(name, description);
+      newVendor.AddOrder(newOrder);
+
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
