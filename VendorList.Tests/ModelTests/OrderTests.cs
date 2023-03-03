@@ -55,6 +55,18 @@ namespace Orders.Tests
       Assert.AreEqual(price, result);
     }
 
+    [TestMethod]
+    public void GetDate_ReturnsOrderDate_String()
+    {
+      string title = "test";
+      string description = "test";
+      string price = "test";
+      string date = "test";
+      Order newOrder = new Order(title, description, date, price);
+      string result = newOrder.Date;
+      Assert.AreEqual(date, result);
+    }
+
 
   }
 }
