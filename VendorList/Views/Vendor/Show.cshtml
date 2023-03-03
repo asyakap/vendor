@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@using List.Models;
+
+<h3>Here are all the orders of this Vendor:</h3>
+
+<ol>
+  @foreach (Order order in @Model["orders"])
+  {
+    <li><a href='/vendor/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+  }
+</ol>
+<p><a href='/vendor/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+<p><a href='/cd'>Return to Vendor list</a></p>
+<p><a href='/'>Return to Main Page</a></p>
