@@ -83,5 +83,16 @@ namespace List.Tests
       List<Order> result = newVendor.Orders;
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void FindByVendorName_ReturnsAllOrdersOfTheVendor_List()
+    {
+      string name = "Vendor1";
+      string description = "Description1";
+      Vendor newVendor = new Vendor(name, description);
+      List<Vendor> newVendor1 = new List<Vendor> { newVendor };
+      List<Vendor> result = Vendor.FindByVendorName(name);
+      CollectionAssert.AreEqual(newVendor1, result);
+    }
   }
 }
