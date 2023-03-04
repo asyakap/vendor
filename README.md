@@ -26,7 +26,7 @@ _A web application that allows user to create and track orders for different ven
 
 ## Known Bugs
 
-* NA
+* Search UI is not finished
 
 ## License
 
