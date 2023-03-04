@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+
+@using List.Models;
+
+<h3>Here are all the orders that match your search:</h3>
+
+<ol>
+  @foreach (Vendor vendor in @Model)
+  {
+    <h3>@vendor.Name:</h3>;
+    @foreach (Order order in @vendor.Orders)
+    {
+      <li>@order.Title</li>
+    }
+  }
+</ol>
+<br>
+<br>
+<p><a href='/'>Return to Main Page</a></p>
+

@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+@using List.Models;
+<form action="/search/vendororders" method="post">
+  <label for="vendor">Add a vendor to search for</label>
+  <input id="vendor" name="vendor" type="text">
+  <br>
+  <button type="submit">Submit</button>
+</form>
+<p><a href='/'>Return to Main Page</a></p>

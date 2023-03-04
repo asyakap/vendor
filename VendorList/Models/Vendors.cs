@@ -38,5 +38,18 @@ namespace List.Models
     {
       return _instances[searchId - 1];
     }
+
+    public static List<Vendor> FindByVendorName(string name)
+    {
+      List<Vendor> list = new List<Vendor> { };
+      foreach (Vendor vendor in _instances) 
+      {
+        if (vendor.Name == name) 
+        {
+          list.Add(vendor);
+        }
+      }
+      return list;
+    }
   }
 }
