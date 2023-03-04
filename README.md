@@ -21,7 +21,7 @@ _A web application that allows user to create and track orders for different ven
 
 ## Test Instructions
 
-1. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's testing directory called "Vendor.Tests".
+1. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's testing directory called "VendorList.Tests".
 2. In the command line, run the command "dotnet testrun" to run the tests. The results of running the tests will appear in the terminal.
 
 ## Known Bugs
